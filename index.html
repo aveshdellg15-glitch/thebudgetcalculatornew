@@ -13,7 +13,89 @@
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>The Budget Calculator</title>
+<title>Free Budget Calculator | The Budget Way</title>
+
+<!-- SEO for Google Search -->
+<meta name="description" content="Use The Budget Way free budget calculator to plan your monthly income, expenses, savings, spending, custom categories, and personal budget in one simple online tool." />
+<meta name="keywords" content="budget calculator, free budget calculator, personal budget calculator, expense calculator, savings calculator, monthly budget planner, income and expenses calculator, budget calculator South Africa, personal finance calculator, money management tool, The Budget Way" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="The Budget Way" />
+<link rel="canonical" href="https://www.thebudgetcalculator.xyz/" />
+
+<!-- Google Search Console verification: replace the content value with your code from Search Console -->
+<meta name="google-site-verification" content="PASTE-YOUR-SEARCH-CONSOLE-CODE-HERE" />
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Free Budget Calculator | The Budget Way" />
+<meta property="og:description" content="Track income, expenses, savings, custom categories, live currencies, and smart money suggestions with The Budget Way." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.thebudgetcalculator.xyz/" />
+<meta property="og:site_name" content="The Budget Way" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Free Budget Calculator | The Budget Way" />
+<meta name="twitter:description" content="A simple free budget calculator for income, expenses, savings, custom categories, and smart suggestions." />
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "The Budget Way",
+  "url": "https://www.thebudgetcalculator.xyz/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "A free budget calculator for tracking income, expenses, savings, custom categories, live currencies, and smart money suggestions.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- FAQ structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is The Budget Way?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Budget Way is a free online budget calculator that helps users plan income, expenses, savings, custom categories, and monthly spending."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is The Budget Way free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Budget Way can be used as a free budget calculator and monthly budget planner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this as an expense calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can enter rent, food, transport, subscriptions, entertainment, savings, other costs, and custom categories to calculate your expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does The Budget Way connect to my bank account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Budget Way does not connect to bank accounts and does not ask for banking passwords, card PINs, or private login details."
+      }
+    }
+  ]
+}
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -273,6 +355,54 @@ button:hover {
   line-height: 1.6;
 }
 
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.ctaLink {
+  display: inline-block;
+  background: #1b5fbf;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+.ctaLink:hover {
+  background: #2872df;
+}
+
+.keywordLine {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.faqList details {
+  background: #0f1a33;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.faqList summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #79b8ff;
+}
+
+.faqList p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -323,6 +453,13 @@ button:hover {
       The Budget Way helps you understand where your money is going and gives smart
       suggestions on where to save, reduce spending, or move extra money.
     </p>
+    <div class="ctaRow">
+      <a class="ctaLink" href="#budgetCards">Start My Free Budget</a>
+      <a class="ctaLink" href="javascript:void(0)" onclick="show('suggestions')">View Smart Suggestions</a>
+    </div>
+    <p class="keywordLine">
+      Free budget calculator • monthly budget planner • expense calculator • savings calculator • personal finance calculator
+    </p>
   </div>
 
   <div class="infoGrid">
@@ -345,6 +482,63 @@ button:hover {
       <h3>4. Get Suggestions</h3>
       <p>After calculating, open the Smart Suggestions tab to see where you could move or save your money.</p>
     </div>
+  </div>
+
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Free Budget Calculator for Income, Expenses and Savings</h2>
+    <p class="policyText">
+      The Budget Way is a free online budget calculator that helps you plan your monthly income,
+      track expenses, create custom spending categories, compare currencies, and understand how much
+      money you may have left after your essential costs.
+    </p>
+
+    <p class="policyText">
+      You can use this personal budget planner as an expense calculator, savings calculator, monthly
+      budget tracker, or simple money management tool. Enter your income, add your costs, calculate
+      your budget, and then open Smart Suggestions to see practical ideas for saving, reducing spending,
+      and moving money toward important goals.
+    </p>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Why Use The Budget Way?</h2>
+    <p class="policyText">
+      The Budget Way is made for anyone who wants a simple way to see their money clearly. You can use it
+      as a monthly budget planner, income and expenses calculator, savings calculator, spending tracker,
+      or student budget calculator. It is useful for planning rent, food, transport, subscriptions,
+      entertainment, school fees, debt payments, business costs, and other monthly expenses.
+    </p>
+
+    <p class="policyText">
+      A budget calculator helps you see whether your expenses are higher than your income, which categories
+      take the most money, and how much you may be able to move into savings or an emergency fund. The goal
+      is to make budgeting feel clear, practical, and easy to understand.
+    </p>
+  </div>
+
+  <div class="card faqList" style="margin-top:20px;">
+    <h2>Budget Calculator Questions</h2>
+
+    <details>
+      <summary>What is a budget calculator?</summary>
+      <p>A budget calculator is a tool that compares your income with your expenses so you can see how much money is left after your monthly costs.</p>
+    </details>
+
+    <details>
+      <summary>Can I use this for monthly expenses?</summary>
+      <p>Yes. You can add rent, food, transport, subscriptions, entertainment, savings, other expenses, and your own custom categories.</p>
+    </details>
+
+    <details>
+      <summary>Can this help me save money?</summary>
+      <p>Yes. After calculating your budget, The Budget Way shows smart suggestions that can help you reduce spending and move money toward savings or important goals.</p>
+    </details>
+
+    <details>
+      <summary>Is this a South African budget calculator?</summary>
+      <p>The calculator can be used in South Africa and other countries. You can choose your country and currency in the Settings section.</p>
+    </details>
   </div>
 
   <h2 class="sectionTitle">Dashboard</h2>
@@ -547,6 +741,19 @@ function loadPage(page){
           The Budget Way is an educational and planning tool. It does not replace professional financial advice,
           but it can help you organise your personal finances more clearly.
         </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <h2>How The Budget Way Helps People Click, Plan and Save</h2>
+        <p class="policyText">
+          Many people search for a free budget calculator because they want a fast answer to a simple question:
+          how much money do I have left after my expenses? The Budget Way gives users a clean place to add income,
+          monthly expenses, custom categories, and savings goals without needing a complicated spreadsheet.
+        </p>
+        <p class="policyText">
+          The site is designed to help people make better everyday money decisions by turning budget numbers into
+          a clear dashboard, chart, and smart suggestions.
+        </p>
       </div>
     `,
 
@@ -837,6 +1044,16 @@ function calculate(){
   drawChart(labels, values);
   analyze(income, total, balance);
   generateSuggestions(income, total, balance, categoryData);
+
+  if (typeof gtag === "function") {
+    gtag("event", "budget_calculated", {
+      currency: selectedCurrency,
+      input_currency: baseCurrency,
+      income: income,
+      expenses: total,
+      balance: balance
+    });
+  }
 }
 
 /* BUDGET ANALYSIS */
