@@ -147,6 +147,29 @@
 }
 </script>
 
+
+<!-- Extra calculators structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Budget Way Extra Financial Calculators",
+  "description": "A collection of free calculators for affordability, subscriptions, debt payoff, emergency funds, moving out, side hustle profit, freelancer rates, car costs, lifestyle risk and financial red flags.",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Can I Afford This? Calculator"},
+    {"@type": "ListItem", "position": 2, "name": "Subscription Leak Calculator"},
+    {"@type": "ListItem", "position": 3, "name": "Debt Payoff Calculator"},
+    {"@type": "ListItem", "position": 4, "name": "Emergency Fund Survival Calculator"},
+    {"@type": "ListItem", "position": 5, "name": "Can I Move Out? Calculator"},
+    {"@type": "ListItem", "position": 6, "name": "Side Hustle Profit Calculator"},
+    {"@type": "ListItem", "position": 7, "name": "Freelancer Rate Calculator"},
+    {"@type": "ListItem", "position": 8, "name": "Car True Cost Calculator"},
+    {"@type": "ListItem", "position": 9, "name": "Am I Living Above My Means? Calculator"},
+    {"@type": "ListItem", "position": 10, "name": "Financial Red Flag Calculator"}
+  ]
+}
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
 <style>
@@ -572,6 +595,189 @@ button, .ctaLink, nav a, summary {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+
+/* Extra calculator pages */
+.calculatorHeroGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.calculatorMenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.toolCard {
+  background: #121c36;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toolCard h3 {
+  color: #79b8ff;
+  margin-top: 0;
+}
+
+.toolCard p {
+  line-height: 1.65;
+  opacity: 0.9;
+}
+
+.toolCard button {
+  margin-top: 12px;
+}
+
+.calculatorLayout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.05fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.calculatorForm {
+  background: #121c36;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.calculatorForm label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.calculatorForm select,
+.calculatorForm input {
+  margin-bottom: 4px;
+}
+
+.calculatorInfo {
+  background: #0f1a33;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.calculatorInfo h3 {
+  color: #79b8ff;
+  margin-top: 0;
+}
+
+.calculatorInfo p,
+.calculatorInfo li {
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.calcResult {
+  margin-top: 16px;
+  background: #0a0f1c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  line-height: 1.7;
+}
+
+.calcResult h3 {
+  margin-top: 0;
+}
+
+.resultGood {
+  border-left: 5px solid #16a34a;
+}
+
+.resultWarning {
+  border-left: 5px solid #f59e0b;
+}
+
+.resultDanger {
+  border-left: 5px solid #dc2626;
+}
+
+.resultNeutral {
+  border-left: 5px solid #4ea1ff;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.pill {
+  background: rgba(78,161,255,0.13);
+  color: #b9d9ff;
+  border: 1px solid rgba(78,161,255,0.22);
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.backTools {
+  display: inline-block;
+  color: #79b8ff;
+  cursor: pointer;
+  margin-bottom: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.backTools:hover {
+  color: white;
+}
+
+.inlineNotice {
+  background: rgba(245,158,11,0.12);
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 14px 0;
+  line-height: 1.6;
+}
+
+.greenNotice {
+  background: rgba(22,163,74,0.12);
+  border-left: 4px solid #16a34a;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 14px 0;
+  line-height: 1.6;
+}
+
+.scoreCircle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(78,161,255,0.12);
+  border: 2px solid rgba(78,161,255,0.35);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8px 0 12px;
+}
+
+@media (max-width: 850px) {
+  .calculatorLayout,
+  .calculatorHeroGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
@@ -631,6 +837,7 @@ button, .ctaLink, nav a, summary {
 
   <nav aria-label="Main navigation">
     <a onclick="show('home')">Home</a>
+    <a onclick="show('calculators')">Extra Calculators</a>
     <a onclick="show('suggestions')">Smart Suggestions</a>
     <a onclick="show('about')">About</a>
     <a onclick="show('privacy')">Privacy</a>
@@ -868,6 +1075,749 @@ button, .ctaLink, nav a, summary {
     </div>
   </div>
 </div>
+
+
+<!-- EXTRA CALCULATORS HUB -->
+<div id="calculators" class="page">
+  <div class="hero">
+    <span class="badge">More Money Tools</span>
+    <h1>Extra Financial Calculators</h1>
+    <p>
+      Use these extra calculators to answer real-life money questions before you spend, move out,
+      take on debt, start a side hustle, set freelance rates, buy a car, or check your financial warning signs.
+      Each calculator gives a clear result, a breakdown, and practical next steps.
+    </p>
+    <div class="ctaRow">
+      <a class="ctaLink" href="javascript:void(0)" onclick="show('affordCalc')">Can I Afford This?</a>
+      <a class="ctaLink" href="javascript:void(0)" onclick="show('debtCalc')">Debt Payoff</a>
+      <a class="ctaLink" href="javascript:void(0)" onclick="show('moveOutCalc')">Can I Move Out?</a>
+    </div>
+  </div>
+
+  <div class="trustStrip" aria-label="Extra calculator highlights">
+    <div class="trustItem">🧮 10 extra calculators</div>
+    <div class="trustItem">📊 Clear results</div>
+    <div class="trustItem">🔒 No bank login needed</div>
+    <div class="trustItem">🌍 Uses your selected currency</div>
+  </div>
+
+  <div class="calculatorMenu">
+    <div class="toolCard">
+      <div>
+        <h3>Can I Afford This? Calculator</h3>
+        <p>Check if a purchase is safe by comparing the item cost, monthly payments, savings, income, expenses, and emergency buffer.</p>
+      </div>
+      <button type="button" onclick="show('affordCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Subscription Leak Calculator</h3>
+        <p>Find out how much money subscriptions, unused apps, forgotten trials, platform fees, and small monthly charges may be leaking every month and year.</p>
+      </div>
+      <button type="button" onclick="show('subscriptionCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Debt Payoff Calculator</h3>
+        <p>Estimate how long it may take to pay off debt, how much interest you may pay, and how much faster extra payments can help.</p>
+      </div>
+      <button type="button" onclick="show('debtCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Emergency Fund Survival Calculator</h3>
+        <p>Calculate how many months your savings could support you if your income dropped or stopped and what emergency fund gap you still have.</p>
+      </div>
+      <button type="button" onclick="show('emergencyCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Can I Move Out? Calculator</h3>
+        <p>Estimate whether your income, rent, bills, food, transport, deposit, and savings are strong enough before moving out.</p>
+      </div>
+      <button type="button" onclick="show('moveOutCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Side Hustle Profit Calculator</h3>
+        <p>Work out your real side hustle profit after costs, platform fees, delivery, marketing, tax, and time.</p>
+      </div>
+      <button type="button" onclick="show('sideHustleCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Freelancer Rate Calculator</h3>
+        <p>Calculate the hourly, daily, and project rate you may need to charge after expenses, tax, admin time, and billable hours.</p>
+      </div>
+      <button type="button" onclick="show('freelancerCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Car True Cost Calculator</h3>
+        <p>See the true monthly and yearly cost of a car including payment, insurance, fuel, maintenance, parking, licensing, and depreciation.</p>
+      </div>
+      <button type="button" onclick="show('carCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Am I Living Above My Means?</h3>
+        <p>Compare your income, expenses, savings, debt payments, lifestyle spending, and credit use to see if your money habits are risky.</p>
+      </div>
+      <button type="button" onclick="show('meansCalc')">Open Calculator</button>
+    </div>
+
+    <div class="toolCard">
+      <div>
+        <h3>Financial Red Flag Calculator</h3>
+        <p>Score warning signs like missed payments, overdrafts, debt pressure, low savings, subscriptions, and high expense ratios.</p>
+      </div>
+      <button type="button" onclick="show('redFlagCalc')">Open Calculator</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Why These Calculators Help</h2>
+    <p class="policyText">
+      A normal budget tells you what happened to your money. These extra calculators help you make decisions before you commit.
+      They are designed for practical moments: buying something, cancelling subscriptions, paying off debt, building an emergency fund,
+      moving out, starting a business idea, charging clients, buying a car, or checking if your lifestyle is becoming too expensive.
+    </p>
+    <div class="footerNote">
+      These calculators are educational planning tools. They do not replace professional financial, credit, tax, legal, or investment advice.
+    </div>
+  </div>
+</div>
+
+<!-- CAN I AFFORD THIS CALCULATOR -->
+<div id="affordCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Purchase Decision Tool</span>
+    <h1>Can I Afford This? Calculator</h1>
+    <p>
+      Use this before buying something expensive, signing up for a payment plan, or spending savings.
+      It checks whether the purchase leaves enough monthly breathing room and whether your savings still protect you after the purchase.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Purchase Details</h2>
+      <label for="affordIncome">Monthly income</label>
+      <input id="affordIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 15000">
+
+      <label for="affordEssentials">Essential monthly expenses</label>
+      <input id="affordEssentials" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Rent, food, transport, bills">
+
+      <label for="affordCurrentDebt">Current monthly debt or payment plans</label>
+      <input id="affordCurrentDebt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1200">
+
+      <label for="affordSavings">Savings available now</label>
+      <input id="affordSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 10000">
+
+      <label for="affordPrice">Item price</label>
+      <input id="affordPrice" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 4500">
+
+      <label for="affordUpfront">Upfront amount you will pay now</label>
+      <input id="affordUpfront" type="number" inputmode="decimal" min="0" step="0.01" placeholder="If paying cash, enter full price">
+
+      <label for="affordMonthly">New monthly payment</label>
+      <input id="affordMonthly" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Use 0 if paying cash">
+
+      <label for="affordMonths">How many months will the payment last?</label>
+      <input id="affordMonths" type="number" inputmode="numeric" min="0" step="1" placeholder="Example: 12">
+
+      <label for="affordBufferMonths">Emergency buffer you want to keep</label>
+      <select id="affordBufferMonths">
+        <option value="1">1 month of essentials</option>
+        <option value="3" selected>3 months of essentials</option>
+        <option value="6">6 months of essentials</option>
+      </select>
+
+      <label for="affordImportance">How important is this purchase?</label>
+      <select id="affordImportance">
+        <option value="need">Need / essential</option>
+        <option value="helpful" selected>Helpful but not urgent</option>
+        <option value="want">Want / lifestyle purchase</option>
+      </select>
+
+      <button type="button" onclick="calculateAffordability()">Check Affordability</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['affordIncome','affordEssentials','affordCurrentDebt','affordSavings','affordPrice','affordUpfront','affordMonthly','affordMonths'], 'affordResult')">Clear</button>
+      <div id="affordResult" class="calcResult resultNeutral">Your affordability result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>How this calculator thinks</h3>
+      <p>It looks at two important questions:</p>
+      <ul>
+        <li><b>Monthly safety:</b> Will the new payment still leave you breathing room after expenses?</li>
+        <li><b>Savings safety:</b> Will you still have an emergency cushion after paying upfront?</li>
+      </ul>
+      <div class="inlineNotice">
+        A purchase can be technically possible but still financially stressful if it removes your emergency fund or creates a long payment you cannot comfortably carry.
+      </div>
+      <h3>Best use cases</h3>
+      <ul>
+        <li>Phone, laptop, furniture, appliance, course, travel or clothing purchase.</li>
+        <li>Checking cash purchase vs payment plan.</li>
+        <li>Deciding whether to wait and save more first.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SUBSCRIPTION LEAK CALCULATOR -->
+<div id="subscriptionCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Monthly Leak Finder</span>
+    <h1>Subscription Leak Calculator</h1>
+    <p>
+      Small subscriptions can quietly drain money every month. This calculator shows your monthly and yearly leak,
+      how much it takes from your income, and what you could redirect into savings or debt payments.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Subscription Details</h2>
+      <label for="subIncome">Monthly income</label>
+      <input id="subIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 15000">
+
+      <label for="subStreaming">Streaming and entertainment subscriptions</label>
+      <input id="subStreaming" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Netflix, Spotify, gaming, apps">
+
+      <label for="subApps">App, cloud, software or phone add-ons</label>
+      <input id="subApps" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 350">
+
+      <label for="subFitness">Gym, fitness, wellness or memberships</label>
+      <input id="subFitness" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 600">
+
+      <label for="subUnused">Subscriptions you barely use</label>
+      <input id="subUnused" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Estimate the unused amount">
+
+      <label for="subAnnual">Annual subscriptions paid once a year</label>
+      <input id="subAnnual" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Total per year">
+
+      <label for="subFees">Bank, platform or account monthly fees</label>
+      <input id="subFees" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 120">
+
+      <label for="subCancelPercent">How much could you realistically cancel?</label>
+      <select id="subCancelPercent">
+        <option value="10">10% cleanup</option>
+        <option value="25" selected>25% cleanup</option>
+        <option value="50">50% aggressive cleanup</option>
+        <option value="75">75% major cleanup</option>
+      </select>
+
+      <button type="button" onclick="calculateSubscriptionLeak()">Find My Leak</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['subIncome','subStreaming','subApps','subFitness','subUnused','subAnnual','subFees'], 'subResult')">Clear</button>
+      <div id="subResult" class="calcResult resultNeutral">Your subscription leak result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>What counts as a leak?</h3>
+      <p>A leak is not only a subscription you never use. It can also be a service you use rarely, a free trial that became paid, or a small fee that no longer gives enough value.</p>
+      <ul>
+        <li>Streaming and music apps</li>
+        <li>Cloud storage and software</li>
+        <li>Gym contracts and memberships</li>
+        <li>Bank fees and platform charges</li>
+        <li>Annual renewals you forgot about</li>
+      </ul>
+      <div class="greenNotice">
+        Even a small monthly leak becomes powerful when redirected into an emergency fund, debt payment, investment habit, or goal.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEBT PAYOFF CALCULATOR -->
+<div id="debtCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Debt Freedom Planner</span>
+    <h1>Debt Payoff Calculator</h1>
+    <p>
+      Estimate how long your debt may take to pay off, how much interest you could pay,
+      and how much time you may save by adding extra monthly payments.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Debt Details</h2>
+      <label for="debtBalance">Current debt balance</label>
+      <input id="debtBalance" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 25000">
+
+      <label for="debtApr">Annual interest rate (%)</label>
+      <input id="debtApr" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 18">
+
+      <label for="debtPayment">Current monthly payment</label>
+      <input id="debtPayment" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1500">
+
+      <label for="debtExtra">Extra monthly payment you can add</label>
+      <input id="debtExtra" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 500">
+
+      <label for="debtFees">Monthly account fees or insurance on the debt</label>
+      <input id="debtFees" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 69">
+
+      <label for="debtStrategy">Preferred strategy</label>
+      <select id="debtStrategy">
+        <option value="avalanche" selected>Pay highest-interest debt first</option>
+        <option value="snowball">Pay smallest debt first for motivation</option>
+      </select>
+
+      <button type="button" onclick="calculateDebtPayoff()">Calculate Payoff</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['debtBalance','debtApr','debtPayment','debtExtra','debtFees'], 'debtResult')">Clear</button>
+      <div id="debtResult" class="calcResult resultNeutral">Your debt payoff result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>Important debt notes</h3>
+      <p>This calculator uses a simple monthly interest estimate. Real credit agreements may include changing interest rates, fees, insurance, missed-payment charges, or different compounding rules.</p>
+      <ul>
+        <li><b>Avalanche:</b> usually saves interest by attacking high-interest debt first.</li>
+        <li><b>Snowball:</b> builds motivation by clearing smaller debts first.</li>
+        <li><b>Extra payments:</b> can cut months or years off a debt when applied consistently.</li>
+      </ul>
+      <div class="inlineNotice">
+        If the monthly payment is too low to cover the interest and fees, the debt can grow instead of shrinking.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EMERGENCY FUND SURVIVAL CALCULATOR -->
+<div id="emergencyCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Safety Net Calculator</span>
+    <h1>Emergency Fund Survival Calculator</h1>
+    <p>
+      Find out how long your savings could support you if income dropped or stopped.
+      It compares savings against essential costs and shows your gap for a 3-month or 6-month emergency fund.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Emergency Details</h2>
+      <label for="emSavings">Savings available for emergencies</label>
+      <input id="emSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 12000">
+
+      <label for="emRent">Rent or housing</label>
+      <input id="emRent" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 6500">
+
+      <label for="emFood">Food and groceries</label>
+      <input id="emFood" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3000">
+
+      <label for="emTransport">Transport and essential travel</label>
+      <input id="emTransport" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1200">
+
+      <label for="emBills">Utilities, phone, medical and required bills</label>
+      <input id="emBills" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1800">
+
+      <label for="emDebt">Minimum debt payments</label>
+      <input id="emDebt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 900">
+
+      <label for="emEmergencyIncome">Income you could still receive in an emergency</label>
+      <input id="emEmergencyIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 0">
+
+      <button type="button" onclick="calculateEmergencyFund()">Calculate Survival Time</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['emSavings','emRent','emFood','emTransport','emBills','emDebt','emEmergencyIncome'], 'emResult')">Clear</button>
+      <div id="emResult" class="calcResult resultNeutral">Your emergency fund result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>What is an emergency fund?</h3>
+      <p>An emergency fund is money kept aside for unexpected situations like job loss, medical costs, urgent repairs, family emergencies, or income gaps.</p>
+      <ul>
+        <li><b>Starter goal:</b> 1 month of essentials.</li>
+        <li><b>Stronger goal:</b> 3 months of essentials.</li>
+        <li><b>Safer goal:</b> 6 months or more if your income is irregular.</li>
+      </ul>
+      <div class="greenNotice">
+        Your emergency fund should be easy to access, but separate enough that you do not spend it casually.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAN I MOVE OUT CALCULATOR -->
+<div id="moveOutCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Independence Readiness Tool</span>
+    <h1>Can I Move Out? Calculator</h1>
+    <p>
+      Moving out is not only rent. This calculator adds rent, utilities, food, transport, insurance,
+      subscriptions, upfront costs, and savings to help you decide whether moving out is financially safe.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Moving Out Details</h2>
+      <label for="moveIncome">Monthly take-home income</label>
+      <input id="moveIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 18000">
+
+      <label for="moveRent">Monthly rent</label>
+      <input id="moveRent" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 7000">
+
+      <label for="moveUtilities">Utilities, electricity, water, internet</label>
+      <input id="moveUtilities" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1800">
+
+      <label for="moveFood">Food and groceries</label>
+      <input id="moveFood" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3500">
+
+      <label for="moveTransport">Transport</label>
+      <input id="moveTransport" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1500">
+
+      <label for="moveInsurance">Insurance, medical, phone and required bills</label>
+      <input id="moveInsurance" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1200">
+
+      <label for="moveLifestyle">Lifestyle and subscriptions</label>
+      <input id="moveLifestyle" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1000">
+
+      <label for="moveSavings">Savings available now</label>
+      <input id="moveSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 25000">
+
+      <label for="moveDeposit">Once-off deposit, furniture and setup costs</label>
+      <input id="moveDeposit" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 18000">
+
+      <button type="button" onclick="calculateMoveOut()">Check Move-Out Readiness</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['moveIncome','moveRent','moveUtilities','moveFood','moveTransport','moveInsurance','moveLifestyle','moveSavings','moveDeposit'], 'moveResult')">Clear</button>
+      <div id="moveResult" class="calcResult resultNeutral">Your move-out result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>Moving out costs people forget</h3>
+      <ul>
+        <li>Deposit, first month rent, admin fees and moving costs.</li>
+        <li>Furniture, bedding, cleaning items, kitchen basics and repairs.</li>
+        <li>Internet, electricity, water, insurance and transport changes.</li>
+        <li>Emergency money for job changes or unexpected expenses.</li>
+      </ul>
+      <div class="inlineNotice">
+        A common danger is affording the rent but not affording the full lifestyle that comes with living independently.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIDE HUSTLE PROFIT CALCULATOR -->
+<div id="sideHustleCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Real Profit Checker</span>
+    <h1>Side Hustle Profit Calculator</h1>
+    <p>
+      Revenue is not profit. Use this to see what your side hustle actually keeps after supplies,
+      platform fees, delivery, marketing, tax, and time.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Side Hustle Details</h2>
+      <label for="sideRevenue">Monthly revenue / sales</label>
+      <input id="sideRevenue" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 10000">
+
+      <label for="sideMaterials">Materials, stock or product costs</label>
+      <input id="sideMaterials" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3500">
+
+      <label for="sidePlatformPercent">Platform or payment fee (%)</label>
+      <input id="sidePlatformPercent" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3.5">
+
+      <label for="sideDelivery">Delivery, packaging and transport</label>
+      <input id="sideDelivery" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 800">
+
+      <label for="sideMarketing">Marketing, ads, data, content or printing</label>
+      <input id="sideMarketing" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 500">
+
+      <label for="sideOther">Other monthly costs</label>
+      <input id="sideOther" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 300">
+
+      <label for="sideTaxPercent">Estimated tax set-aside (%)</label>
+      <input id="sideTaxPercent" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 15">
+
+      <label for="sideHours">Hours worked per month</label>
+      <input id="sideHours" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 40">
+
+      <button type="button" onclick="calculateSideHustle()">Calculate Real Profit</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['sideRevenue','sideMaterials','sidePlatformPercent','sideDelivery','sideMarketing','sideOther','sideTaxPercent','sideHours'], 'sideResult')">Clear</button>
+      <div id="sideResult" class="calcResult resultNeutral">Your side hustle result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>Why profit matters</h3>
+      <p>A side hustle can look successful because money comes in, but the real test is what remains after every cost and the time spent.</p>
+      <ul>
+        <li><b>Gross profit:</b> revenue minus direct costs.</li>
+        <li><b>Net profit:</b> what remains after all costs and tax set-aside.</li>
+        <li><b>Hourly profit:</b> whether the side hustle is worth the time.</li>
+      </ul>
+      <div class="greenNotice">
+        If the hourly profit is low, you may need to raise prices, reduce costs, sell higher-value offers, or simplify the process.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FREELANCER RATE CALCULATOR -->
+<div id="freelancerCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Pricing Tool</span>
+    <h1>Freelancer Rate Calculator</h1>
+    <p>
+      Freelancers cannot charge only for the hours spent doing the visible work. This calculator includes desired income,
+      expenses, tax, billable hours, admin time, and unpaid time to estimate an hourly and project rate.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Freelance Details</h2>
+      <label for="freeIncome">Desired monthly take-home income</label>
+      <input id="freeIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 25000">
+
+      <label for="freeExpenses">Monthly business expenses</label>
+      <input id="freeExpenses" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Software, transport, marketing">
+
+      <label for="freeTax">Tax set-aside (%)</label>
+      <input id="freeTax" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 20">
+
+      <label for="freeHoursWeek">Working hours per week</label>
+      <input id="freeHoursWeek" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 35">
+
+      <label for="freeBillable">Billable percentage of your time (%)</label>
+      <input id="freeBillable" type="number" inputmode="decimal" min="0" max="100" step="0.01" placeholder="Example: 60">
+
+      <label for="freeWeeks">Working weeks per year</label>
+      <input id="freeWeeks" type="number" inputmode="decimal" min="1" max="52" step="0.01" placeholder="Example: 46">
+
+      <label for="freeProjectHours">Estimated hours for a project</label>
+      <input id="freeProjectHours" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 10">
+
+      <button type="button" onclick="calculateFreelancerRate()">Calculate My Rate</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['freeIncome','freeExpenses','freeTax','freeHoursWeek','freeBillable','freeWeeks','freeProjectHours'], 'freeResult')">Clear</button>
+      <div id="freeResult" class="calcResult resultNeutral">Your freelancer rate result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>Why freelancers undercharge</h3>
+      <p>Many freelancers only price the visible work, but clients are also paying for your preparation, skill, tools, admin, revisions, taxes, downtime, and business risk.</p>
+      <ul>
+        <li>Not every working hour is billable.</li>
+        <li>You need to cover software, equipment, marketing and admin.</li>
+        <li>You need tax money set aside before paying yourself.</li>
+        <li>Your rate should support rest, sick days and slow months.</li>
+      </ul>
+      <div class="inlineNotice">
+        This is a pricing estimate, not a tax calculation. For real tax planning, check with a qualified professional.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAR TRUE COST CALCULATOR -->
+<div id="carCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Vehicle Cost Reality Check</span>
+    <h1>Car True Cost Calculator</h1>
+    <p>
+      A car costs more than the monthly installment. This calculator adds payment, insurance, fuel,
+      maintenance, parking, license costs, and depreciation so you can see the real monthly and yearly cost.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Car Details</h2>
+      <label for="carIncome">Monthly income</label>
+      <input id="carIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 22000">
+
+      <label for="carPayment">Monthly car payment</label>
+      <input id="carPayment" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 4500">
+
+      <label for="carInsurance">Insurance</label>
+      <input id="carInsurance" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1200">
+
+      <label for="carFuel">Fuel</label>
+      <input id="carFuel" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 2500">
+
+      <label for="carMaintenance">Maintenance and tyres monthly estimate</label>
+      <input id="carMaintenance" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 800">
+
+      <label for="carParking">Parking, tolls and washing</label>
+      <input id="carParking" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 600">
+
+      <label for="carLicense">License, registration and annual fees per year</label>
+      <input id="carLicense" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1800">
+
+      <label for="carDepreciation">Estimated depreciation per month</label>
+      <input id="carDepreciation" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1500">
+
+      <button type="button" onclick="calculateCarTrueCost()">Calculate True Car Cost</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['carIncome','carPayment','carInsurance','carFuel','carMaintenance','carParking','carLicense','carDepreciation'], 'carResult')">Clear</button>
+      <div id="carResult" class="calcResult resultNeutral">Your car cost result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>What makes a car expensive?</h3>
+      <p>The car payment is only one part of the real cost. Fuel, insurance, tyres, servicing, repairs, parking, license fees and depreciation can make the true cost much higher.</p>
+      <ul>
+        <li><b>Cash flow cost:</b> money leaving your account monthly.</li>
+        <li><b>Ownership cost:</b> includes depreciation and annual fees.</li>
+        <li><b>Income pressure:</b> how much of your income the car consumes.</li>
+      </ul>
+      <div class="inlineNotice">
+        If a car takes too much of your income, it can delay savings, emergency fund building, debt payoff and moving out.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIVING ABOVE MEANS CALCULATOR -->
+<div id="meansCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Lifestyle Reality Check</span>
+    <h1>Am I Living Above My Means? Calculator</h1>
+    <p>
+      This calculator checks if your lifestyle is bigger than your income by looking at expenses, debt payments,
+      savings rate, lifestyle spending, credit card growth, and emergency savings.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Lifestyle Details</h2>
+      <label for="meansIncome">Monthly income</label>
+      <input id="meansIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 18000">
+
+      <label for="meansExpenses">Total monthly expenses</label>
+      <input id="meansExpenses" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Include everything">
+
+      <label for="meansDebt">Monthly debt payments</label>
+      <input id="meansDebt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Loans, credit cards, accounts">
+
+      <label for="meansSavings">Monthly savings</label>
+      <input id="meansSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1500">
+
+      <label for="meansLifestyle">Lifestyle spending</label>
+      <input id="meansLifestyle" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Eating out, fun, shopping">
+
+      <label for="meansCreditGrowth">Credit card or account balance increasing per month</label>
+      <input id="meansCreditGrowth" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Use 0 if not increasing">
+
+      <label for="meansEmergency">Emergency savings available now</label>
+      <input id="meansEmergency" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 5000">
+
+      <button type="button" onclick="calculateLivingAboveMeans()">Check My Means</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['meansIncome','meansExpenses','meansDebt','meansSavings','meansLifestyle','meansCreditGrowth','meansEmergency'], 'meansResult')">Clear</button>
+      <div id="meansResult" class="calcResult resultNeutral">Your living-above-means result will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>Signs of living above your means</h3>
+      <ul>
+        <li>You spend almost everything you earn.</li>
+        <li>Your debt or credit card balance keeps growing.</li>
+        <li>You cannot save consistently.</li>
+        <li>A small emergency forces you to borrow.</li>
+        <li>Lifestyle spending is high while savings are low.</li>
+      </ul>
+      <div class="greenNotice">
+        The goal is not to shame spending. The goal is to make sure your lifestyle still leaves room for safety, freedom and future choices.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCIAL RED FLAG CALCULATOR -->
+<div id="redFlagCalc" class="page">
+  <a class="backTools" onclick="show('calculators')">← Back to Extra Calculators</a>
+  <div class="hero">
+    <span class="badge">Money Warning Score</span>
+    <h1>Financial Red Flag Calculator</h1>
+    <p>
+      This calculator gives a simple financial warning score by checking common red flags:
+      high expenses, low savings, debt pressure, missed payments, overdrafts, subscriptions and reliance on credit.
+    </p>
+  </div>
+
+  <div class="calculatorLayout">
+    <div class="calculatorForm">
+      <h2>Enter Red Flag Details</h2>
+      <label for="redIncome">Monthly income</label>
+      <input id="redIncome" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 18000">
+
+      <label for="redExpenses">Monthly expenses</label>
+      <input id="redExpenses" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 16500">
+
+      <label for="redSavings">Emergency savings available</label>
+      <input id="redSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3000">
+
+      <label for="redDebt">Total debt balance</label>
+      <input id="redDebt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 20000">
+
+      <label for="redDebtPayments">Monthly debt payments</label>
+      <input id="redDebtPayments" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 2500">
+
+      <label for="redSubscriptions">Monthly subscriptions and small charges</label>
+      <input id="redSubscriptions" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 900">
+
+      <label for="redMissed">Missed payments in the last 6 months</label>
+      <input id="redMissed" type="number" inputmode="numeric" min="0" step="1" placeholder="Example: 0">
+
+      <label for="redOverdraft">How often do you use overdraft, borrowing or credit for normal expenses?</label>
+      <select id="redOverdraft">
+        <option value="0">Never</option>
+        <option value="8">Rarely</option>
+        <option value="16">Monthly</option>
+        <option value="25">Often / every month</option>
+      </select>
+
+      <label for="redStress">How stressed do you feel about money?</label>
+      <select id="redStress">
+        <option value="0">Low stress</option>
+        <option value="7">Some stress</option>
+        <option value="14">High stress</option>
+        <option value="22">Extreme stress</option>
+      </select>
+
+      <button type="button" onclick="calculateFinancialRedFlags()">Calculate Red Flag Score</button>
+      <button type="button" class="secondaryBtn" onclick="clearExtraCalculator(['redIncome','redExpenses','redSavings','redDebt','redDebtPayments','redSubscriptions','redMissed'], 'redResult')">Clear</button>
+      <div id="redResult" class="calcResult resultNeutral">Your financial red flag score will appear here.</div>
+    </div>
+
+    <div class="calculatorInfo">
+      <h3>What this score means</h3>
+      <p>This is a simple warning-score tool. It does not judge you and it does not replace financial advice. It helps you see which areas may need attention first.</p>
+      <ul>
+        <li><b>Low score:</b> your money system may be fairly stable.</li>
+        <li><b>Medium score:</b> there are pressure points to fix.</li>
+        <li><b>High score:</b> focus on safety, debt control and emergency planning.</li>
+      </ul>
+      <div class="inlineNotice">
+        A red flag is not failure. It is an early warning sign that gives you time to adjust before the problem becomes worse.
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- ABOUT -->
 <div id="about" class="page"></div>
@@ -1743,6 +2693,652 @@ function drawChart(labels, values){
       }
     }
   });
+}
+
+
+
+/* EXTRA FINANCIAL CALCULATORS */
+function extraNumber(id){
+  return Number(document.getElementById(id)?.value) || 0;
+}
+
+function extraPercent(id){
+  return extraNumber(id) / 100;
+}
+
+function setCalcResult(id, html, className = "resultNeutral"){
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  el.className = "calcResult " + className;
+  el.innerHTML = html;
+}
+
+function clearExtraCalculator(ids, resultId){
+  ids.forEach(id => {
+    const input = document.getElementById(id);
+    if(input){
+      input.value = "";
+    }
+  });
+
+  const result = document.getElementById(resultId);
+  if(result){
+    result.className = "calcResult resultNeutral";
+    result.innerHTML = "Result cleared. Enter your numbers and calculate again.";
+  }
+}
+
+function basicStatus(score, goodText, warningText, dangerText){
+  if(score === "good") return { label: goodText, className: "resultGood" };
+  if(score === "warning") return { label: warningText, className: "resultWarning" };
+  return { label: dangerText, className: "resultDanger" };
+}
+
+function calculateAffordability(){
+  const income = extraNumber("affordIncome");
+  const essentials = extraNumber("affordEssentials");
+  const currentDebt = extraNumber("affordCurrentDebt");
+  const savings = extraNumber("affordSavings");
+  const price = extraNumber("affordPrice");
+  const upfront = extraNumber("affordUpfront");
+  const monthly = extraNumber("affordMonthly");
+  const months = extraNumber("affordMonths");
+  const bufferMonths = extraNumber("affordBufferMonths") || 3;
+  const importance = document.getElementById("affordImportance")?.value || "helpful";
+
+  if(income <= 0 || price <= 0){
+    setCalcResult("affordResult", "<h3>⚠ Add income and item price</h3><p>Please enter at least your monthly income and the item price so the calculator can check affordability.</p>", "resultWarning");
+    return;
+  }
+
+  const monthlySurplusBefore = income - essentials - currentDebt;
+  const monthlySurplusAfter = monthlySurplusBefore - monthly;
+  const cashAfterPurchase = savings - upfront;
+  const emergencyTarget = essentials * bufferMonths;
+  const bufferGap = emergencyTarget - cashAfterPurchase;
+  const paymentToIncome = income > 0 ? (monthly / income) * 100 : 0;
+  const upfrontToSavings = savings > 0 ? (upfront / savings) * 100 : 100;
+  const totalPaymentCost = upfront + (monthly * months);
+
+  let score = "good";
+  let reasons = [];
+
+  if(monthlySurplusAfter < 0){
+    score = "danger";
+    reasons.push("The new payment would push your monthly budget negative.");
+  } else if(monthlySurplusAfter < income * 0.10){
+    score = "warning";
+    reasons.push("You would have very little monthly breathing room after the purchase.");
+  }
+
+  if(cashAfterPurchase < 0){
+    score = "danger";
+    reasons.push("The upfront payment is higher than your available savings.");
+  } else if(cashAfterPurchase < emergencyTarget){
+    if(score !== "danger") score = "warning";
+    reasons.push("Your savings after the purchase would be below your chosen emergency buffer.");
+  }
+
+  if(importance === "want" && paymentToIncome > 10){
+    if(score !== "danger") score = "warning";
+    reasons.push("This is a want/lifestyle purchase and the monthly payment is more than 10% of income.");
+  }
+
+  if(reasons.length === 0){
+    reasons.push("The purchase looks affordable based on your income, savings and monthly breathing room.");
+  }
+
+  const status = basicStatus(score, "✅ Looks affordable", "⚠ Affordable but risky", "🚨 Not safe right now");
+
+  setCalcResult("affordResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Monthly room before: ${money(monthlySurplusBefore)}</span>
+      <span class="pill">Monthly room after: ${money(monthlySurplusAfter)}</span>
+      <span class="pill">Cash after purchase: ${money(cashAfterPurchase)}</span>
+      <span class="pill">Payment is ${paymentToIncome.toFixed(1)}% of income</span>
+    </div>
+    <p><b>Item price:</b> ${money(price)}</p>
+    <p><b>Total planned cost through payments:</b> ${money(totalPaymentCost || upfront || price)}</p>
+    <p><b>Emergency buffer target:</b> ${money(emergencyTarget)} (${bufferMonths} month/s of essentials)</p>
+    <p><b>Savings buffer gap:</b> ${bufferGap > 0 ? money(bufferGap) + " short" : "You are above your chosen buffer"}</p>
+    <h3>What this means</h3>
+    <ul>${reasons.map(reason => `<li>${reason}</li>`).join("")}</ul>
+    <h3>Suggested next step</h3>
+    <p>${score === "good" ? "You could consider buying it, but still compare prices and avoid taking on unnecessary debt." : score === "warning" ? "Consider waiting, saving more upfront, choosing a cheaper option, or reducing another expense before buying." : "Pause this purchase for now. Focus on improving cash flow or savings first."}</p>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "can_i_afford_this" }); }
+}
+
+function calculateSubscriptionLeak(){
+  const income = extraNumber("subIncome");
+  const streaming = extraNumber("subStreaming");
+  const apps = extraNumber("subApps");
+  const fitness = extraNumber("subFitness");
+  const unused = extraNumber("subUnused");
+  const annual = extraNumber("subAnnual");
+  const fees = extraNumber("subFees");
+  const cancelPercent = extraNumber("subCancelPercent") || 25;
+
+  const annualMonthly = annual / 12;
+  const monthlyTotal = streaming + apps + fitness + unused + annualMonthly + fees;
+  const yearlyTotal = monthlyTotal * 12;
+  const realisticSavings = monthlyTotal * (cancelPercent / 100);
+  const yearlySavings = realisticSavings * 12;
+  const incomePercent = income > 0 ? (monthlyTotal / income) * 100 : 0;
+
+  let score = "good";
+  if(incomePercent > 10 || unused > monthlyTotal * 0.35){ score = "danger"; }
+  else if(incomePercent > 5 || unused > 0){ score = "warning"; }
+
+  const status = basicStatus(score, "✅ Subscription spending looks controlled", "⚠ You have a noticeable money leak", "🚨 Subscriptions are draining too much");
+
+  setCalcResult("subResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Monthly total: ${money(monthlyTotal)}</span>
+      <span class="pill">Yearly total: ${money(yearlyTotal)}</span>
+      <span class="pill">${incomePercent.toFixed(1)}% of income</span>
+      <span class="pill">Possible monthly saving: ${money(realisticSavings)}</span>
+    </div>
+    <p><b>Annual subscriptions converted monthly:</b> ${money(annualMonthly)}</p>
+    <p><b>Unused or low-value subscriptions:</b> ${money(unused)}</p>
+    <h3>What to do next</h3>
+    <ul>
+      <li>Cancel or pause anything unused for the next 30 days.</li>
+      <li>Check your bank statement for small charges and duplicate apps.</li>
+      <li>If you cut ${cancelPercent}% of these costs, you could save about <b>${money(yearlySavings)}</b> per year.</li>
+      <li>Move the saved amount straight into savings or debt payment before it gets spent elsewhere.</li>
+    </ul>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "subscription_leak" }); }
+}
+
+function simulateDebt(balance, apr, payment, fees){
+  let months = 0;
+  let totalInterest = 0;
+  let totalFees = 0;
+  let current = balance;
+  const monthlyRate = apr / 12;
+
+  if(balance <= 0){
+    return { months: 0, totalInterest: 0, totalFees: 0, finalBalance: 0, impossible: false };
+  }
+
+  if(payment <= 0){
+    return { months: 0, totalInterest: 0, totalFees: 0, finalBalance: balance, impossible: true };
+  }
+
+  while(current > 0 && months < 600){
+    const interest = current * monthlyRate;
+    current += interest + fees;
+    totalInterest += interest;
+    totalFees += fees;
+
+    if(payment <= interest + fees && months === 0){
+      return { months: 0, totalInterest, totalFees, finalBalance: current, impossible: true };
+    }
+
+    current -= payment;
+    months++;
+  }
+
+  return { months, totalInterest, totalFees, finalBalance: Math.max(current, 0), impossible: months >= 600 };
+}
+
+function calculateDebtPayoff(){
+  const balance = extraNumber("debtBalance");
+  const apr = extraPercent("debtApr");
+  const payment = extraNumber("debtPayment");
+  const extra = extraNumber("debtExtra");
+  const fees = extraNumber("debtFees");
+  const strategy = document.getElementById("debtStrategy")?.value || "avalanche";
+
+  if(balance <= 0 || payment <= 0){
+    setCalcResult("debtResult", "<h3>⚠ Add debt balance and payment</h3><p>Please enter your debt balance and monthly payment so the calculator can estimate your payoff time.</p>", "resultWarning");
+    return;
+  }
+
+  const normal = simulateDebt(balance, apr, payment, fees);
+  const faster = simulateDebt(balance, apr, payment + extra, fees);
+
+  if(normal.impossible){
+    setCalcResult("debtResult", `
+      <h3>🚨 Your payment may be too low</h3>
+      <p>Your monthly payment may not be enough to reduce the balance after interest and fees. This means the debt could stay stuck or grow.</p>
+      <p><b>Estimated first-month interest and fees:</b> ${money((balance * apr / 12) + fees)}</p>
+      <p><b>Your payment:</b> ${money(payment)}</p>
+      <h3>Suggested next step</h3>
+      <p>Increase the payment, reduce the interest rate, remove fees if possible, or contact the lender/credit provider for a safer payment plan.</p>
+    `, "resultDanger");
+    return;
+  }
+
+  const monthsSaved = extra > 0 && !faster.impossible ? normal.months - faster.months : 0;
+  const interestSaved = extra > 0 && !faster.impossible ? normal.totalInterest - faster.totalInterest : 0;
+  const years = Math.floor(normal.months / 12);
+  const remMonths = normal.months % 12;
+  const status = extra > 0 ? "resultGood" : "resultWarning";
+
+  setCalcResult("debtResult", `
+    <h3>${extra > 0 ? "✅ Extra payments can speed this up" : "⚠ Payoff plan estimated"}</h3>
+    <div class="pillRow">
+      <span class="pill">Payoff time: ${years} years ${remMonths} months</span>
+      <span class="pill">Interest estimate: ${money(normal.totalInterest)}</span>
+      <span class="pill">Fees estimate: ${money(normal.totalFees)}</span>
+      <span class="pill">Monthly payment: ${money(payment + extra)}</span>
+    </div>
+    <p><b>Current debt:</b> ${money(balance)}</p>
+    <p><b>Strategy selected:</b> ${strategy === "avalanche" ? "Pay highest-interest debt first" : "Pay smallest debt first for motivation"}</p>
+    ${extra > 0 && !faster.impossible ? `
+      <h3>With your extra payment</h3>
+      <p>You could pay this off in about <b>${Math.floor(faster.months / 12)} years ${faster.months % 12} months</b>.</p>
+      <p>Estimated time saved: <b>${monthsSaved} month/s</b>.</p>
+      <p>Estimated interest saved: <b>${money(interestSaved)}</b>.</p>
+    ` : ""}
+    <h3>Suggested next step</h3>
+    <ul>
+      <li>Automate the payment so it happens before lifestyle spending.</li>
+      <li>Put subscription savings or extra income toward the debt.</li>
+      <li>Avoid adding new debt while paying this one down.</li>
+    </ul>
+  `, status);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "debt_payoff" }); }
+}
+
+function calculateEmergencyFund(){
+  const savings = extraNumber("emSavings");
+  const essentials = extraNumber("emRent") + extraNumber("emFood") + extraNumber("emTransport") + extraNumber("emBills") + extraNumber("emDebt");
+  const emergencyIncome = extraNumber("emEmergencyIncome");
+  const monthlyGap = Math.max(essentials - emergencyIncome, 0);
+  const survivalMonths = monthlyGap > 0 ? savings / monthlyGap : Infinity;
+  const target3 = essentials * 3;
+  const target6 = essentials * 6;
+  const gap3 = Math.max(target3 - savings, 0);
+  const gap6 = Math.max(target6 - savings, 0);
+
+  if(essentials <= 0){
+    setCalcResult("emResult", "<h3>⚠ Add essential costs</h3><p>Please enter your monthly essential costs so the calculator can estimate survival time.</p>", "resultWarning");
+    return;
+  }
+
+  let score = "good";
+  if(survivalMonths < 1){ score = "danger"; }
+  else if(survivalMonths < 3){ score = "warning"; }
+
+  const status = basicStatus(score, "✅ Strong emergency cushion", "⚠ Your emergency fund needs work", "🚨 Emergency fund is very low");
+
+  setCalcResult("emResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Monthly essentials: ${money(essentials)}</span>
+      <span class="pill">Monthly emergency gap: ${money(monthlyGap)}</span>
+      <span class="pill">Survival time: ${survivalMonths === Infinity ? "Ongoing if income covers essentials" : survivalMonths.toFixed(1) + " months"}</span>
+      <span class="pill">Current savings: ${money(savings)}</span>
+    </div>
+    <p><b>3-month emergency target:</b> ${money(target3)} ${gap3 > 0 ? "(" + money(gap3) + " short)" : "(target reached)"}</p>
+    <p><b>6-month emergency target:</b> ${money(target6)} ${gap6 > 0 ? "(" + money(gap6) + " short)" : "(target reached)"}</p>
+    <h3>Suggested next step</h3>
+    <p>${score === "good" ? "Keep this emergency money separate and only use it for real emergencies." : score === "warning" ? "Build toward at least 3 months of essentials. Start with a small automatic transfer every month." : "Start with a mini emergency fund first. Even a small buffer can stop you from needing debt for every surprise."}</p>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "emergency_fund_survival" }); }
+}
+
+function calculateMoveOut(){
+  const income = extraNumber("moveIncome");
+  const rent = extraNumber("moveRent");
+  const monthlyCosts = rent + extraNumber("moveUtilities") + extraNumber("moveFood") + extraNumber("moveTransport") + extraNumber("moveInsurance") + extraNumber("moveLifestyle");
+  const savings = extraNumber("moveSavings");
+  const upfront = extraNumber("moveDeposit");
+  const leftover = income - monthlyCosts;
+  const rentRatio = income > 0 ? (rent / income) * 100 : 0;
+  const costRatio = income > 0 ? (monthlyCosts / income) * 100 : 0;
+  const savingsAfter = savings - upfront;
+  const emergencyTarget = monthlyCosts * 3;
+
+  if(income <= 0 || rent <= 0){
+    setCalcResult("moveResult", "<h3>⚠ Add income and rent</h3><p>Please enter your take-home income and expected rent so the calculator can check moving-out readiness.</p>", "resultWarning");
+    return;
+  }
+
+  let score = "good";
+  let reasons = [];
+
+  if(leftover < 0){
+    score = "danger";
+    reasons.push("Your estimated monthly costs are higher than your income.");
+  } else if(leftover < income * 0.15){
+    score = "warning";
+    reasons.push("You would have very little money left after monthly living costs.");
+  }
+
+  if(rentRatio > 35){
+    if(score !== "danger") score = "warning";
+    reasons.push("Rent is above 35% of your income, which may create pressure.");
+  }
+
+  if(savingsAfter < 0){
+    score = "danger";
+    reasons.push("Your setup costs are higher than your current savings.");
+  } else if(savingsAfter < emergencyTarget){
+    if(score !== "danger") score = "warning";
+    reasons.push("After moving costs, your emergency cushion would be below 3 months of new living costs.");
+  }
+
+  if(reasons.length === 0){
+    reasons.push("Your estimated moving-out numbers look workable, but keep checking real quotes before signing anything.");
+  }
+
+  const status = basicStatus(score, "✅ You may be ready to move out", "⚠ Moving out may be risky", "🚨 Not ready to move out yet");
+
+  setCalcResult("moveResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Monthly cost: ${money(monthlyCosts)}</span>
+      <span class="pill">Leftover: ${money(leftover)}</span>
+      <span class="pill">Rent ratio: ${rentRatio.toFixed(1)}%</span>
+      <span class="pill">Total cost ratio: ${costRatio.toFixed(1)}%</span>
+    </div>
+    <p><b>Savings after setup costs:</b> ${money(savingsAfter)}</p>
+    <p><b>Suggested 3-month emergency fund after moving:</b> ${money(emergencyTarget)}</p>
+    <h3>Readiness notes</h3>
+    <ul>${reasons.map(reason => `<li>${reason}</li>`).join("")}</ul>
+    <h3>Suggested next step</h3>
+    <p>${score === "good" ? "Get real quotes for rent, utilities and transport, then build a moving checklist." : score === "warning" ? "Consider cheaper rent, a roommate, more savings, or delaying until your monthly leftover is stronger." : "Pause the move for now and focus on savings, income, debt reduction, or cheaper housing options."}</p>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "can_i_move_out" }); }
+}
+
+function calculateSideHustle(){
+  const revenue = extraNumber("sideRevenue");
+  const materials = extraNumber("sideMaterials");
+  const platformFee = revenue * extraPercent("sidePlatformPercent");
+  const delivery = extraNumber("sideDelivery");
+  const marketing = extraNumber("sideMarketing");
+  const other = extraNumber("sideOther");
+  const taxPercent = extraPercent("sideTaxPercent");
+  const hours = extraNumber("sideHours");
+  const beforeTaxProfit = revenue - materials - platformFee - delivery - marketing - other;
+  const taxSetAside = Math.max(beforeTaxProfit, 0) * taxPercent;
+  const netProfit = beforeTaxProfit - taxSetAside;
+  const margin = revenue > 0 ? (netProfit / revenue) * 100 : 0;
+  const hourlyProfit = hours > 0 ? netProfit / hours : 0;
+  const totalCosts = materials + platformFee + delivery + marketing + other + taxSetAside;
+
+  if(revenue <= 0){
+    setCalcResult("sideResult", "<h3>⚠ Add your revenue</h3><p>Please enter monthly sales or revenue so the calculator can estimate real profit.</p>", "resultWarning");
+    return;
+  }
+
+  let score = "good";
+  if(netProfit <= 0){ score = "danger"; }
+  else if(margin < 20 || hourlyProfit < revenue * 0.01){ score = "warning"; }
+
+  const status = basicStatus(score, "✅ Your side hustle looks profitable", "⚠ Profit exists but may be thin", "🚨 This side hustle may be losing money");
+
+  setCalcResult("sideResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Revenue: ${money(revenue)}</span>
+      <span class="pill">Total costs: ${money(totalCosts)}</span>
+      <span class="pill">Net profit: ${money(netProfit)}</span>
+      <span class="pill">Profit margin: ${margin.toFixed(1)}%</span>
+      <span class="pill">Hourly profit: ${money(hourlyProfit)}</span>
+    </div>
+    <p><b>Platform/payment fees:</b> ${money(platformFee)}</p>
+    <p><b>Tax set-aside estimate:</b> ${money(taxSetAside)}</p>
+    <h3>Suggested next step</h3>
+    <ul>
+      <li>${score === "good" ? "Track costs carefully and consider reinvesting part of the profit." : "Review pricing, supplier costs and time spent."}</li>
+      <li>Raise prices if your profit does not reward your time.</li>
+      <li>Separate tax money before spending the profit.</li>
+      <li>Focus on products or services with higher margin and lower admin.</li>
+    </ul>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "side_hustle_profit" }); }
+}
+
+function calculateFreelancerRate(){
+  const desiredTakeHome = extraNumber("freeIncome");
+  const expenses = extraNumber("freeExpenses");
+  const tax = extraPercent("freeTax");
+  const hoursWeek = extraNumber("freeHoursWeek");
+  const billablePercent = extraPercent("freeBillable");
+  const weeksYear = extraNumber("freeWeeks") || 46;
+  const projectHours = extraNumber("freeProjectHours");
+  const monthlyTargetBeforeTax = tax >= 1 ? desiredTakeHome + expenses : (desiredTakeHome + expenses) / (1 - tax || 1);
+  const yearlyTarget = monthlyTargetBeforeTax * 12;
+  const billableHoursYear = hoursWeek * weeksYear * (billablePercent || 0);
+  const hourlyRate = billableHoursYear > 0 ? yearlyTarget / billableHoursYear : 0;
+  const dayRate = hourlyRate * 8;
+  const projectRate = projectHours > 0 ? hourlyRate * projectHours : 0;
+
+  if(desiredTakeHome <= 0 || hoursWeek <= 0 || billablePercent <= 0){
+    setCalcResult("freeResult", "<h3>⚠ Add income, hours and billable percentage</h3><p>Please enter your desired income, working hours and billable percentage so the calculator can estimate a rate.</p>", "resultWarning");
+    return;
+  }
+
+  let className = "resultGood";
+  if(billablePercent < 0.4){ className = "resultWarning"; }
+  if(hourlyRate <= 0){ className = "resultDanger"; }
+
+  setCalcResult("freeResult", `
+    <h3>✅ Estimated freelancer rates</h3>
+    <div class="pillRow">
+      <span class="pill">Hourly rate: ${money(hourlyRate)}</span>
+      <span class="pill">Day rate: ${money(dayRate)}</span>
+      <span class="pill">Project estimate: ${money(projectRate)}</span>
+      <span class="pill">Billable hours/year: ${billableHoursYear.toFixed(0)}</span>
+    </div>
+    <p><b>Monthly target before tax and expenses:</b> ${money(monthlyTargetBeforeTax)}</p>
+    <p><b>Yearly business target:</b> ${money(yearlyTarget)}</p>
+    <h3>How to use this rate</h3>
+    <ul>
+      <li>Use the hourly rate as your minimum, not always as your public price.</li>
+      <li>For projects, add extra for revisions, meetings, admin and urgency.</li>
+      <li>If clients often negotiate down, quote with enough buffer.</li>
+      <li>If the rate feels too high, reduce expenses, increase billable work, or target higher-value clients.</li>
+    </ul>
+  `, className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "freelancer_rate" }); }
+}
+
+function calculateCarTrueCost(){
+  const income = extraNumber("carIncome");
+  const payment = extraNumber("carPayment");
+  const insurance = extraNumber("carInsurance");
+  const fuel = extraNumber("carFuel");
+  const maintenance = extraNumber("carMaintenance");
+  const parking = extraNumber("carParking");
+  const licenseMonthly = extraNumber("carLicense") / 12;
+  const depreciation = extraNumber("carDepreciation");
+  const monthlyCash = payment + insurance + fuel + maintenance + parking + licenseMonthly;
+  const monthlyTrue = monthlyCash + depreciation;
+  const yearlyTrue = monthlyTrue * 12;
+  const incomePercent = income > 0 ? (monthlyTrue / income) * 100 : 0;
+
+  if(monthlyTrue <= 0){
+    setCalcResult("carResult", "<h3>⚠ Add car costs</h3><p>Please enter at least one car cost so the calculator can estimate the true monthly cost.</p>", "resultWarning");
+    return;
+  }
+
+  let score = "good";
+  if(incomePercent > 30){ score = "danger"; }
+  else if(incomePercent > 20){ score = "warning"; }
+
+  const status = basicStatus(score, "✅ Car cost looks manageable", "⚠ Car cost is heavy", "🚨 Car cost may be too high");
+
+  setCalcResult("carResult", `
+    <h3>${status.label}</h3>
+    <div class="pillRow">
+      <span class="pill">Monthly cash cost: ${money(monthlyCash)}</span>
+      <span class="pill">True monthly cost: ${money(monthlyTrue)}</span>
+      <span class="pill">True yearly cost: ${money(yearlyTrue)}</span>
+      <span class="pill">${incomePercent.toFixed(1)}% of income</span>
+    </div>
+    <p><b>License/annual fees converted monthly:</b> ${money(licenseMonthly)}</p>
+    <p><b>Depreciation included:</b> ${money(depreciation)} per month</p>
+    <h3>Suggested next step</h3>
+    <p>${score === "good" ? "This car may fit your income, but still compare insurance, fuel use and maintenance before committing." : score === "warning" ? "Consider a cheaper car, larger deposit, lower insurance, or waiting until income improves." : "This car may put too much pressure on your budget. Consider a cheaper option or delay the purchase."}</p>
+  `, status.className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "car_true_cost" }); }
+}
+
+function calculateLivingAboveMeans(){
+  const income = extraNumber("meansIncome");
+  const expenses = extraNumber("meansExpenses");
+  const debt = extraNumber("meansDebt");
+  const savings = extraNumber("meansSavings");
+  const lifestyle = extraNumber("meansLifestyle");
+  const creditGrowth = extraNumber("meansCreditGrowth");
+  const emergency = extraNumber("meansEmergency");
+
+  if(income <= 0){
+    setCalcResult("meansResult", "<h3>⚠ Add income</h3><p>Please enter your monthly income so the calculator can compare your lifestyle against what you earn.</p>", "resultWarning");
+    return;
+  }
+
+  const leftover = income - expenses;
+  const expenseRatio = (expenses / income) * 100;
+  const savingsRate = (savings / income) * 100;
+  const debtRatio = (debt / income) * 100;
+  const lifestyleRatio = (lifestyle / income) * 100;
+  const emergencyMonths = expenses > 0 ? emergency / expenses : 0;
+
+  let score = 0;
+  if(expenseRatio > 100) score += 35;
+  else if(expenseRatio > 90) score += 25;
+  else if(expenseRatio > 75) score += 12;
+
+  if(savingsRate < 5) score += 18;
+  else if(savingsRate < 10) score += 8;
+
+  if(debtRatio > 30) score += 20;
+  else if(debtRatio > 15) score += 10;
+
+  if(lifestyleRatio > 30) score += 12;
+  if(creditGrowth > 0) score += 20;
+  if(emergencyMonths < 1) score += 15;
+  else if(emergencyMonths < 3) score += 7;
+
+  let className = "resultGood";
+  let label = "✅ You appear to be living within your means";
+  if(score >= 65){
+    className = "resultDanger";
+    label = "🚨 You may be living above your means";
+  } else if(score >= 35){
+    className = "resultWarning";
+    label = "⚠ You may be close to living above your means";
+  }
+
+  setCalcResult("meansResult", `
+    <h3>${label}</h3>
+    <div class="scoreCircle">${Math.min(score, 100)}</div>
+    <div class="pillRow">
+      <span class="pill">Leftover: ${money(leftover)}</span>
+      <span class="pill">Expense ratio: ${expenseRatio.toFixed(1)}%</span>
+      <span class="pill">Savings rate: ${savingsRate.toFixed(1)}%</span>
+      <span class="pill">Debt payment ratio: ${debtRatio.toFixed(1)}%</span>
+      <span class="pill">Emergency cover: ${emergencyMonths.toFixed(1)} months</span>
+    </div>
+    <h3>What this means</h3>
+    <ul>
+      <li>${expenseRatio > 90 ? "Your expenses are taking most or all of your income." : "Your expense ratio is not the only factor, but it shows how tight your budget is."}</li>
+      <li>${savingsRate < 10 ? "Your savings rate is low, so building a buffer should be a priority." : "Your savings rate is helping protect your future."}</li>
+      <li>${creditGrowth > 0 ? "Your credit balance is growing, which is a strong warning sign." : "Your credit balance is not growing based on what you entered."}</li>
+    </ul>
+    <h3>Suggested next step</h3>
+    <p>${score >= 65 ? "Cut flexible spending, pause new debt, reduce subscriptions, and build a starter emergency fund." : score >= 35 ? "Choose one or two spending areas to reduce and increase savings before pressure builds." : "Keep tracking your budget and continue building savings."}</p>
+  `, className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "living_above_means" }); }
+}
+
+function calculateFinancialRedFlags(){
+  const income = extraNumber("redIncome");
+  const expenses = extraNumber("redExpenses");
+  const savings = extraNumber("redSavings");
+  const debt = extraNumber("redDebt");
+  const debtPayments = extraNumber("redDebtPayments");
+  const subscriptions = extraNumber("redSubscriptions");
+  const missed = extraNumber("redMissed");
+  const overdraft = extraNumber("redOverdraft");
+  const stress = extraNumber("redStress");
+
+  if(income <= 0){
+    setCalcResult("redResult", "<h3>⚠ Add income</h3><p>Please enter your monthly income so the calculator can score the warning signs properly.</p>", "resultWarning");
+    return;
+  }
+
+  const expenseRatio = (expenses / income) * 100;
+  const debtPaymentRatio = (debtPayments / income) * 100;
+  const subscriptionRatio = (subscriptions / income) * 100;
+  const emergencyMonths = expenses > 0 ? savings / expenses : 0;
+  const debtToIncome = income > 0 ? debt / income : 0;
+
+  let score = 0;
+  if(expenseRatio > 100) score += 25;
+  else if(expenseRatio > 90) score += 18;
+  else if(expenseRatio > 75) score += 8;
+
+  if(emergencyMonths < 1) score += 18;
+  else if(emergencyMonths < 3) score += 8;
+
+  if(debtPaymentRatio > 35) score += 20;
+  else if(debtPaymentRatio > 20) score += 10;
+
+  if(debtToIncome > 3) score += 12;
+  else if(debtToIncome > 1.5) score += 6;
+
+  if(subscriptionRatio > 8) score += 8;
+  else if(subscriptionRatio > 4) score += 4;
+
+  score += Math.min(missed * 8, 24);
+  score += overdraft;
+  score += stress;
+  score = Math.min(Math.round(score), 100);
+
+  let className = "resultGood";
+  let label = "✅ Low red flag score";
+  if(score >= 70){
+    className = "resultDanger";
+    label = "🚨 High financial red flag score";
+  } else if(score >= 40){
+    className = "resultWarning";
+    label = "⚠ Medium financial red flag score";
+  }
+
+  setCalcResult("redResult", `
+    <h3>${label}</h3>
+    <div class="scoreCircle">${score}</div>
+    <div class="pillRow">
+      <span class="pill">Expense ratio: ${expenseRatio.toFixed(1)}%</span>
+      <span class="pill">Emergency cover: ${emergencyMonths.toFixed(1)} months</span>
+      <span class="pill">Debt payment ratio: ${debtPaymentRatio.toFixed(1)}%</span>
+      <span class="pill">Subscription ratio: ${subscriptionRatio.toFixed(1)}%</span>
+      <span class="pill">Missed payments: ${missed}</span>
+    </div>
+    <h3>Main warning areas</h3>
+    <ul>
+      <li>${expenseRatio > 90 ? "Expenses are very high compared to income." : "Expense level is not the biggest warning from your numbers."}</li>
+      <li>${emergencyMonths < 3 ? "Emergency savings are below 3 months of expenses." : "Emergency savings are stronger than many households."}</li>
+      <li>${debtPaymentRatio > 20 ? "Debt payments are taking a large share of monthly income." : "Debt payment pressure looks lower based on your inputs."}</li>
+      <li>${missed > 0 ? "Missed payments are a serious warning sign because they can create fees and credit stress." : "No missed payments entered."}</li>
+    </ul>
+    <h3>Suggested next step</h3>
+    <p>${score >= 70 ? "Focus on essentials first: stop new debt, contact creditors if needed, cut leaks, and build a small emergency buffer." : score >= 40 ? "Pick the biggest warning area and fix it first, especially debt payments, subscriptions, or low savings." : "Keep your system stable by saving consistently and reviewing your budget monthly."}</p>
+  `, className);
+
+  if(typeof gtag === "function"){ gtag("event", "extra_calculator_used", { calculator: "financial_red_flag" }); }
 }
 
 
