@@ -12,6 +12,19 @@
   gtag('config', 'G-9ZD2K3QBVJ');
 </script>
 <meta charset="UTF-8" />
+<!-- Performance, mobile and brand polish -->
+<meta name="theme-color" content="#0a0f1c" />
+<meta name="apple-mobile-web-app-title" content="The Budget Way" />
+<meta name="application-name" content="The Budget Way" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://open.er-api.com" crossorigin>
+<link rel="dns-prefetch" href="https://open.er-api.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f1c'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34'%3E%F0%9F%92%B0%3C/text%3E%3C/svg%3E">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Free Budget Calculator | The Budget Way</title>
 
@@ -31,10 +44,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.thebudgetcalculator.xyz/" />
 <meta property="og:site_name" content="The Budget Way" />
+<meta property="og:image" content="https://www.thebudgetcalculator.xyz/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Budget Way free budget calculator dashboard preview" />
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Free Budget Calculator | The Budget Way" />
 <meta name="twitter:description" content="A simple free budget calculator for income, expenses, savings, custom categories, and smart suggestions." />
+<meta name="twitter:image" content="https://www.thebudgetcalculator.xyz/og-image.png" />
 
 <!-- Structured data for Google -->
 <script type="application/ld+json">
@@ -97,7 +115,39 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Extra structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "The Budget Way",
+      "url": "https://www.thebudgetcalculator.xyz/",
+      "logo": "https://www.thebudgetcalculator.xyz/og-image.png"
+    },
+    {
+      "@type": "WebSite",
+      "name": "The Budget Way",
+      "url": "https://www.thebudgetcalculator.xyz/",
+      "description": "A free budget calculator for planning monthly income, expenses, savings and custom categories."
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to use The Budget Way budget calculator",
+      "description": "Enter your income, add your expenses, calculate your budget and review smart money suggestions.",
+      "step": [
+        {"@type": "HowToStep", "name": "Enter income", "text": "Type in your monthly income."},
+        {"@type": "HowToStep", "name": "Add expenses", "text": "Add rent, food, transport, subscriptions, entertainment, savings and other expenses."},
+        {"@type": "HowToStep", "name": "Create custom categories", "text": "Add your own categories for costs that are personal to you."},
+        {"@type": "HowToStep", "name": "Calculate your budget", "text": "Press Calculate My Budget to see your balance, chart and money suggestions."}
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
 <style>
 body {
@@ -403,6 +453,132 @@ button:hover {
 }
 
 
+.skipLink {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #ffffff;
+  color: #0a0f1c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 999;
+  font-weight: bold;
+}
+
+.skipLink:focus {
+  left: 12px;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid #79b8ff;
+  outline-offset: 3px;
+}
+
+button, .ctaLink, nav a, summary {
+  min-height: 44px;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.secondaryBtn {
+  background: #334155;
+}
+
+.secondaryBtn:hover {
+  background: #475569;
+}
+
+.successBtn {
+  background: #15803d;
+}
+
+.successBtn:hover {
+  background: #16a34a;
+}
+
+.trustStrip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.trustItem {
+  background: rgba(78,161,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.helpText {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.resultStatus {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(78,161,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
+  line-height: 1.6;
+}
+
+.tipList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.tipCard {
+  background: #0f1a33;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px;
+  line-height: 1.6;
+}
+
+.progressWrap {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.progressBar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #4ea1ff, #79b8ff);
+  transition: width 0.3s ease;
+}
+
+.noScriptBox {
+  margin: 20px auto;
+  max-width: 1100px;
+  padding: 18px;
+  background: #121c36;
+  color: white;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -421,16 +597,39 @@ button:hover {
   .hero h1 {
     font-size: 26px;
   }
+
+  .container {
+    padding: 16px;
+  }
+
+  .ctaLink, button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .chartBox {
+    height: 240px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<a class="skipLink" href="#main-content">Skip to calculator</a>
+
+<noscript>
+  <div class="noScriptBox">
+    <h1>Free Budget Calculator | The Budget Way</h1>
+    <p>This website works best with JavaScript enabled because the calculator, chart, currency rates, and smart suggestions run in your browser.</p>
+  </div>
+</noscript>
+
+<header role="banner">
   <div class="logo">💰 The Budget Way</div>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a onclick="show('home')">Home</a>
     <a onclick="show('suggestions')">Smart Suggestions</a>
     <a onclick="show('about')">About</a>
@@ -440,26 +639,34 @@ button:hover {
   </nav>
 </header>
 
-<div class="container">
+<main class="container" id="main-content">
 
 <!-- HOME -->
 <div id="home" class="page active">
 
   <div class="hero">
     <span class="badge">Smart Budget Dashboard</span>
-    <h1>Take control of your money with The Budget Way.</h1>
+    <h1>Free Budget Calculator for Monthly Expenses and Savings</h1>
     <p>
-      Track your income, expenses, savings, and custom categories in one simple dashboard.
+      Take control of your money with The Budget Way. Track your income, expenses, savings, and custom categories in one simple dashboard.
       The Budget Way helps you understand where your money is going and gives smart
       suggestions on where to save, reduce spending, or move extra money.
     </p>
     <div class="ctaRow">
-      <a class="ctaLink" href="#budgetCards">Start My Free Budget</a>
+      <a class="ctaLink" href="#budgetCards" onclick="scrollToBudget(event)">Start My Free Budget</a>
       <a class="ctaLink" href="javascript:void(0)" onclick="show('suggestions')">View Smart Suggestions</a>
+      <a class="ctaLink" href="javascript:void(0)" onclick="shareWebsiteLink()">Share This Tool</a>
     </div>
     <p class="keywordLine">
       Free budget calculator • monthly budget planner • expense calculator • savings calculator • personal finance calculator
     </p>
+  </div>
+
+  <div class="trustStrip" aria-label="Website trust highlights">
+    <div class="trustItem">✅ Free to use</div>
+    <div class="trustItem">🔒 No bank login needed</div>
+    <div class="trustItem">💾 Saves on your device</div>
+    <div class="trustItem">🌍 Works with many currencies</div>
   </div>
 
   <div class="infoGrid">
@@ -539,38 +746,99 @@ button:hover {
       <summary>Is this a South African budget calculator?</summary>
       <p>The calculator can be used in South Africa and other countries. You can choose your country and currency in the Settings section.</p>
     </details>
+
+    <details>
+      <summary>Will my budget disappear if I refresh the page?</summary>
+      <p>No. This version saves your budget entries on your own device using browser storage, so your numbers can stay there when you come back.</p>
+    </details>
+
+    <details>
+      <summary>Can I download or share my budget results?</summary>
+      <p>Yes. After calculating, you can download a simple text summary or share/copy your results.</p>
+    </details>
+
+    <details>
+      <summary>What expenses should I include?</summary>
+      <p>Include fixed costs like rent and transport, flexible costs like entertainment, and future-focused categories like savings, emergency funds and debt payments.</p>
+    </details>
+
+    <details>
+      <summary>Is this financial advice?</summary>
+      <p>No. The Budget Way is an educational planning tool. It can help you understand your numbers, but it does not replace professional financial advice.</p>
+    </details>
+  </div>
+
+
+  <div class="card" style="margin-top:20px;">
+    <h2>How to Use This Free Budget Calculator</h2>
+    <div class="tipList">
+      <div class="tipCard"><b>Step 1:</b> Enter your monthly income before deductions or after deductions, depending on how you prefer to budget.</div>
+      <div class="tipCard"><b>Step 2:</b> Add your main expenses such as rent, food, transport, subscriptions, entertainment and savings.</div>
+      <div class="tipCard"><b>Step 3:</b> Add custom categories for school fees, debt, gym, clothing, medical costs, pets, business costs or anything else.</div>
+      <div class="tipCard"><b>Step 4:</b> Press Calculate My Budget to see your balance, spending percentage, chart and smart suggestions.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Simple Budgeting Tips</h2>
+    <p class="policyText">
+      A helpful starting point is the 50/30/20 budgeting idea: spend around 50% on needs, 30% on wants,
+      and 20% on savings or debt payments. Your real budget may look different, but this can help you compare
+      where your money is going.
+    </p>
+    <div class="tipList">
+      <div class="tipCard"><b>Needs:</b> rent, food, transport, electricity, school fees, medical costs and essential bills.</div>
+      <div class="tipCard"><b>Wants:</b> entertainment, takeaways, shopping, extra subscriptions and non-essential spending.</div>
+      <div class="tipCard"><b>Savings:</b> emergency fund, future goals, debt payments, investments or money kept aside.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Popular Budget Categories</h2>
+    <p class="policyText">
+      Use this calculator for rent, groceries, petrol, public transport, phone contracts, Netflix, Spotify,
+      entertainment, clothing, debt payments, savings, school fees, university costs, business expenses,
+      medical costs, pets, gym, family support and emergency funds.
+    </p>
   </div>
 
   <h2 class="sectionTitle">Dashboard</h2>
 
   <div class="cards" id="budgetCards">
-    <div class="card"><h4>Income</h4><input id="Income" type="number" placeholder="Enter income"></div>
-    <div class="card"><h4>Rent</h4><input id="Rent" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Food</h4><input id="Food" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Transport</h4><input id="Transport" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Subscriptions</h4><input id="Subscriptions" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Entertainment</h4><input id="Entertainment" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Savings</h4><input id="Savings" type="number" placeholder="Enter amount"></div>
-    <div class="card"><h4>Other</h4><input id="Other" type="number" placeholder="Enter amount"></div>
+    <div class="card"><h4><label for="Income">Monthly Income</label></h4><input id="Income" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 15000" autocomplete="off"><p class="helpText">Enter the money you receive in a month.</p></div>
+    <div class="card"><h4><label for="Rent">Rent / Housing</label></h4><input id="Rent" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 6500" autocomplete="off"><p class="helpText">Rent, bond, residence or accommodation.</p></div>
+    <div class="card"><h4><label for="Food">Food / Groceries</label></h4><input id="Food" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 3000" autocomplete="off"><p class="helpText">Groceries, meals, takeaways or essentials.</p></div>
+    <div class="card"><h4><label for="Transport">Transport</label></h4><input id="Transport" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 1200" autocomplete="off"><p class="helpText">Petrol, Uber, bus, taxi, train or car costs.</p></div>
+    <div class="card"><h4><label for="Subscriptions">Subscriptions</label></h4><input id="Subscriptions" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 350" autocomplete="off"><p class="helpText">Netflix, Spotify, apps, memberships or services.</p></div>
+    <div class="card"><h4><label for="Entertainment">Entertainment</label></h4><input id="Entertainment" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 800" autocomplete="off"><p class="helpText">Going out, hobbies, events and fun spending.</p></div>
+    <div class="card"><h4><label for="Savings">Savings</label></h4><input id="Savings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 2000" autocomplete="off"><p class="helpText">Emergency fund, goals, investments or debt payments.</p></div>
+    <div class="card"><h4><label for="Other">Other</label></h4><input id="Other" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 500" autocomplete="off"><p class="helpText">Anything that does not fit another category.</p></div>
   </div>
 
   <div class="card" style="margin-top:20px;">
     <h3>➕ Add Your Own Category</h3>
 
-    <label>Category Name</label>
-    <input id="newCategoryName" placeholder="Example: Gym, Clothing, School Fees">
+    <label for="newCategoryName">Category Name</label>
+    <input id="newCategoryName" placeholder="Example: Gym, Clothing, School Fees" maxlength="40" autocomplete="off">
 
-    <label>Amount</label>
-    <input id="newCategoryAmount" type="number" placeholder="Enter amount">
+    <label for="newCategoryAmount">Amount</label>
+    <input id="newCategoryAmount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Example: 450" autocomplete="off">
 
-    <button onclick="addCategory()">Add Category</button>
+    <button type="button" onclick="addCategory()">Add Category</button>
 
     <p class="smallText">Your custom categories will be included in the calculation, chart, and smart suggestions.</p>
   </div>
 
-  <button onclick="calculate()">Calculate My Budget</button>
+  <div class="actionGrid" aria-label="Budget calculator actions">
+    <button type="button" onclick="calculate()">Calculate My Budget</button>
+    <button type="button" class="secondaryBtn" onclick="resetBudget()">Reset Budget</button>
+    <button type="button" class="successBtn" onclick="downloadBudgetReport()">Download Summary</button>
+    <button type="button" class="secondaryBtn" onclick="shareBudgetResults()">Share / Copy Results</button>
+  </div>
 
-  <div class="analysis" id="analysisBox">Analysis will appear here...</div>
+  <div class="resultStatus" id="saveStatus">Your entries can be saved privately on this device.</div>
+  <div class="analysis" id="analysisBox" aria-live="polite">Analysis will appear here...</div>
+  <div class="progressWrap" aria-label="Spending percentage visual indicator"><div class="progressBar" id="spendingProgress"></div></div>
 
   <div class="chartBox">
     <canvas id="chart"></canvas>
@@ -621,14 +889,14 @@ button:hover {
   <div class="card">
     <h3>Settings</h3>
 
-    <label>Country</label>
+    <label for="country">Country</label>
     <select id="country">
       <option>Loading countries...</option>
     </select>
 
     <br><br>
 
-    <label>Budget Input Currency</label>
+    <label for="baseCurrency">Budget Input Currency</label>
     <select id="baseCurrency">
       <option value="ZAR">ZAR</option>
     </select>
@@ -636,7 +904,7 @@ button:hover {
 
     <br>
 
-    <label>Display Currency</label>
+    <label for="currency">Display Currency</label>
     <select id="currency">
       <option value="ZAR">ZAR</option>
     </select>
@@ -651,7 +919,8 @@ button:hover {
     <h3>Live Currency Conversion Rates</h3>
     <p class="smallText">Rates update automatically while the page is open.</p>
 
-    <input id="currencySearch" placeholder="Search currency code or name...">
+    <label for="currencySearch">Search Currency</label>
+    <input id="currencySearch" placeholder="Search currency code or name..." autocomplete="off">
 
     <div id="currencyRateList" class="rateList">
       Loading currency rates...
@@ -659,7 +928,7 @@ button:hover {
   </div>
 </div>
 
-</div>
+</main>
 
 <script>
 
@@ -669,6 +938,9 @@ let baseCurrency = "ZAR";
 let exchangeRates = { ZAR: 1 };
 let exchangeLastUpdated = "";
 let customCategories = [];
+const STORAGE_KEY = "theBudgetWayBudgetV2";
+let lastBudgetSummary = null;
+let savedCountryCode = "";
 
 /* NAV */
 function show(page){
@@ -885,6 +1157,8 @@ function loadPage(page){
 document.addEventListener("change", (e) => {
   if(e.target.id === "country"){
     updateCurrencyFromCountry();
+    savedCountryCode = e.target.value;
+    saveBudgetToStorage();
   }
 
   if(e.target.id === "baseCurrency"){
@@ -893,12 +1167,14 @@ document.addEventListener("change", (e) => {
     updateExchangeStatus();
     renderCurrencyRateList();
     refreshBudgetIfNumbersExist();
+    saveBudgetToStorage();
   }
 
   if(e.target.id === "currency"){
     selectedCurrency = e.target.value;
     updateExchangeStatus();
     refreshBudgetIfNumbersExist();
+    saveBudgetToStorage();
   }
 });
 
@@ -936,6 +1212,256 @@ function val(id){
   return Number(document.getElementById(id)?.value) || 0;
 }
 
+function escapeHTML(value){
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function scrollToBudget(event){
+  if(event){
+    event.preventDefault();
+  }
+  document.getElementById("budgetCards")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function updateSaveStatus(message){
+  const status = document.getElementById("saveStatus");
+  if(status){
+    status.innerText = message;
+  }
+}
+
+function collectBudgetData(){
+  const defaultCategories = ["Rent", "Food", "Transport", "Subscriptions", "Entertainment", "Savings", "Other"];
+  const income = val("Income");
+  const categories = [];
+
+  defaultCategories.forEach(name => {
+    categories.push({ name: name, amount: val(name), id: name, custom: false });
+  });
+
+  customCategories.forEach(cat => {
+    categories.push({ name: cat.name, amount: val(cat.id), id: cat.id, custom: true });
+  });
+
+  const expenses = categories.reduce((sum, cat) => sum + Number(cat.amount || 0), 0);
+  const balance = income - expenses;
+
+  return { income, expenses, balance, categories };
+}
+
+function saveBudgetToStorage(){
+  try {
+    const defaultValues = {};
+    ["Income", "Rent", "Food", "Transport", "Subscriptions", "Entertainment", "Savings", "Other"].forEach(id => {
+      const input = document.getElementById(id);
+      if(input){
+        defaultValues[id] = input.value;
+      }
+    });
+
+    const customValues = customCategories.map(cat => ({
+      id: cat.id,
+      name: cat.name,
+      amount: document.getElementById(cat.id)?.value || cat.amount || ""
+    }));
+
+    const data = {
+      defaultValues,
+      customValues,
+      baseCurrency,
+      selectedCurrency,
+      country: document.getElementById("country")?.value || savedCountryCode || "",
+      savedAt: new Date().toISOString()
+    };
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    updateSaveStatus("Saved privately on this device.");
+  } catch(error) {
+    updateSaveStatus("Budget could not be saved on this device, but the calculator still works.");
+  }
+}
+
+function createCustomCategoryCard(id, name, amount){
+  const budgetCards = document.getElementById("budgetCards");
+  if(!budgetCards) return;
+
+  const safeName = escapeHTML(name);
+  const safeAmount = escapeHTML(amount);
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.id = id + "_card";
+
+  card.innerHTML = `
+    <h4><label for="${id}">${safeName}</label></h4>
+    <input id="${id}" type="number" inputmode="decimal" min="0" step="0.01" value="${safeAmount}" placeholder="Example: 450" autocomplete="off">
+    <p class="helpText">Custom budget category.</p>
+    <button type="button" class="deleteBtn" onclick="removeCategory('${id}')">Remove</button>
+  `;
+
+  budgetCards.appendChild(card);
+}
+
+function loadBudgetFromStorage(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return;
+
+    const data = JSON.parse(raw);
+
+    Object.entries(data.defaultValues || {}).forEach(([id, value]) => {
+      const input = document.getElementById(id);
+      if(input){
+        input.value = value;
+      }
+    });
+
+    customCategories = [];
+    (data.customValues || []).forEach(cat => {
+      if(!cat.name) return;
+      const id = cat.id || ("custom_" + Date.now() + Math.floor(Math.random() * 1000));
+      customCategories.push({ id: id, name: cat.name, amount: cat.amount || 0 });
+      createCustomCategoryCard(id, cat.name, cat.amount || 0);
+    });
+
+    if(data.baseCurrency){ baseCurrency = data.baseCurrency; }
+    if(data.selectedCurrency){ selectedCurrency = data.selectedCurrency; }
+    if(data.country){ savedCountryCode = data.country; }
+
+    updateSaveStatus("Restored your saved budget from this device.");
+    refreshBudgetIfNumbersExist();
+  } catch(error) {
+    updateSaveStatus("Saved budget could not be restored. You can still use the calculator normally.");
+  }
+}
+
+function attachBudgetAutoSave(){
+  document.addEventListener("input", (e) => {
+    if(e.target.closest("#budgetCards") || e.target.id === "newCategoryName" || e.target.id === "newCategoryAmount"){
+      saveBudgetToStorage();
+    }
+  });
+}
+
+function resetBudget(){
+  const shouldReset = confirm("Clear your budget numbers and custom categories on this device?");
+  if(!shouldReset) return;
+
+  ["Income", "Rent", "Food", "Transport", "Subscriptions", "Entertainment", "Savings", "Other"].forEach(id => {
+    const input = document.getElementById(id);
+    if(input){ input.value = ""; }
+  });
+
+  customCategories.forEach(cat => {
+    document.getElementById(cat.id + "_card")?.remove();
+  });
+  customCategories = [];
+
+  localStorage.removeItem(STORAGE_KEY);
+  lastBudgetSummary = null;
+
+  if(chart){
+    chart.destroy();
+    chart = null;
+  }
+
+  document.getElementById("analysisBox").innerText = "Analysis will appear here...";
+  document.getElementById("suggestionResults").innerHTML = "Calculate your expenses first to see smart suggestions.";
+  const progress = document.getElementById("spendingProgress");
+  if(progress){ progress.style.width = "0%"; }
+  updateSaveStatus("Budget cleared on this device.");
+}
+
+function buildBudgetPlainText(){
+  const data = collectBudgetData();
+  const spendingPercent = data.income > 0 ? ((data.expenses / data.income) * 100).toFixed(1) : "0.0";
+
+  const lines = [
+    "The Budget Way Summary",
+    "Website: https://www.thebudgetcalculator.xyz/",
+    "",
+    `Income: ${money(data.income)}`,
+    `Expenses: ${money(data.expenses)}`,
+    `Balance: ${money(data.balance)}`,
+    `Spending percentage: ${spendingPercent}%`,
+    "",
+    "Categories:"
+  ];
+
+  data.categories
+    .filter(cat => Number(cat.amount || 0) > 0)
+    .forEach(cat => lines.push(`- ${cat.name}: ${money(cat.amount)}`));
+
+  lines.push("", "Note: This is a planning summary, not professional financial advice.");
+  return lines.join("\n");
+}
+
+function downloadBudgetReport(){
+  if(!lastBudgetSummary){
+    calculate();
+  }
+
+  const text = buildBudgetPlainText();
+  const blob = new Blob([text], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "the-budget-way-summary.txt";
+  link.click();
+  URL.revokeObjectURL(url);
+  updateSaveStatus("Budget summary downloaded.");
+
+  if (typeof gtag === "function") {
+    gtag("event", "budget_summary_downloaded");
+  }
+}
+
+async function shareBudgetResults(){
+  if(!lastBudgetSummary){
+    calculate();
+  }
+
+  const text = buildBudgetPlainText();
+
+  try {
+    if(navigator.share){
+      await navigator.share({ title: "The Budget Way Summary", text: text, url: "https://www.thebudgetcalculator.xyz/" });
+      updateSaveStatus("Budget summary shared.");
+    } else if(navigator.clipboard){
+      await navigator.clipboard.writeText(text);
+      updateSaveStatus("Budget summary copied to clipboard.");
+    } else {
+      alert(text);
+      updateSaveStatus("Budget summary shown on screen.");
+    }
+  } catch(error) {
+    updateSaveStatus("Sharing was cancelled or unavailable.");
+  }
+}
+
+async function shareWebsiteLink(){
+  const text = "Try this free budget calculator from The Budget Way: https://www.thebudgetcalculator.xyz/";
+
+  try {
+    if(navigator.share){
+      await navigator.share({ title: "Free Budget Calculator | The Budget Way", text: text, url: "https://www.thebudgetcalculator.xyz/" });
+    } else if(navigator.clipboard){
+      await navigator.clipboard.writeText(text);
+      alert("Website link copied to clipboard.");
+    } else {
+      alert(text);
+    }
+  } catch(error) {
+    // User may have cancelled native share.
+  }
+}
+
+
 /* ADD CUSTOM CATEGORY */
 function addCategory(){
 
@@ -958,22 +1484,11 @@ function addCategory(){
     amount: amount
   });
 
-  const budgetCards = document.getElementById("budgetCards");
-
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = id + "_card";
-
-  card.innerHTML = `
-    <h4>${name}</h4>
-    <input id="${id}" type="number" value="${amount}" placeholder="Enter amount">
-    <button class="deleteBtn" onclick="removeCategory('${id}')">Remove</button>
-  `;
-
-  budgetCards.appendChild(card);
+  createCustomCategoryCard(id, name, amount);
 
   nameInput.value = "";
   amountInput.value = "";
+  saveBudgetToStorage();
 }
 
 /* REMOVE CUSTOM CATEGORY */
@@ -985,6 +1500,8 @@ function removeCategory(id){
   if(card){
     card.remove();
   }
+
+  saveBudgetToStorage();
 }
 
 /* CALC */
@@ -1041,9 +1558,12 @@ function calculate(){
 
   let balance = income - total;
 
+  lastBudgetSummary = { income, expenses: total, balance, categoryData, baseCurrency, selectedCurrency };
+
   drawChart(labels, values);
   analyze(income, total, balance);
   generateSuggestions(income, total, balance, categoryData);
+  saveBudgetToStorage();
 
   if (typeof gtag === "function") {
     gtag("event", "budget_calculated", {
@@ -1085,6 +1605,11 @@ Advice: ${advice}
 
 Now open the Smart Suggestions tab for money movement advice.
 `;
+
+  const progress = document.getElementById("spendingProgress");
+  if(progress){
+    progress.style.width = Math.min(ratio * 100, 100) + "%";
+  }
 }
 
 /* SMART MONEY SUGGESTIONS */
@@ -1198,6 +1723,24 @@ function drawChart(labels, values){
     data: {
       labels,
       datasets: [{ data: values }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: "white"
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context){
+              return `${context.label}: ${money(context.raw)}`;
+            }
+          }
+        }
+      }
     }
   });
 }
@@ -1249,7 +1792,7 @@ async function loadCountries(){
       countrySelect.appendChild(option);
     });
 
-    countrySelect.value = "ZA";
+    countrySelect.value = savedCountryCode || "ZA";
     updateCurrencyFromCountry(false);
 
   } catch(error) {
@@ -1287,7 +1830,10 @@ async function loadExchangeRates(){
 
   } catch(error) {
     if(status){
-      status.innerText = "Live exchange rates could not load. The calculator will still work using your selected currency code.";
+      status.innerHTML = `
+        Live exchange rates could not load. The calculator will still work using your selected currency code.<br>
+        <button type="button" class="secondaryBtn" onclick="loadExchangeRates()">Retry Exchange Rates</button>
+      `;
     }
   }
 }
@@ -1417,6 +1963,8 @@ function startLiveSettings(){
 loadPage("about");
 loadPage("privacy");
 loadPage("terms");
+attachBudgetAutoSave();
+loadBudgetFromStorage();
 startLiveSettings();
 
 </script>
