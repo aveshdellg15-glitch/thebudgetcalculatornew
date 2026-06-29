@@ -1,7 +1,0 @@
-# robots.txt for The Budget Way
-# Website: https://www.thebudgetcalculator.xyz/
-
-User-agent: *
-Allow: /
-
-Sitemap: https://www.thebudgetcalculator.xyz/sitemap.xml
